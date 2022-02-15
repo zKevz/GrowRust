@@ -60,7 +60,7 @@ To create another implementation variant function, you can add it in `VariantFun
 Feel free to contribute in the development of the server! If you have found any bugs, feel free to fix or contact me. Any help would be appreciated.
 
 ## Credits
-[Abood](https://github.com/AboodTBR)
+[Abood](https://github.com/AboodTBR) (Definitely a cool guy)
 
 [Mempler](https://github.com/Mempler)
 
