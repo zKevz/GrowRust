@@ -1,0 +1,16 @@
+pub const FLIPPED: u32 = 1 << 0;
+pub const EDITABLE: u32 = 1 << 1;
+pub const SEEDLESS: u32 = 1 << 2;
+pub const PERMANENT: u32 = 1 << 3;
+pub const DROPLESS: u32 = 1 << 4;
+pub const NOSELF: u32 = 1 << 5;
+pub const NOSHADOW: u32 = 1 << 6;
+pub const WORLD_LOCK: u32 = 1 << 7;
+pub const BETA: u32 = 1 << 8;
+pub const AUTOPICKUP: u32 = 1 << 9;
+pub const MOD: u32 = 1 << 10;
+pub const RANDGROW: u32 = 1 << 11;
+pub const PUBLIC: u32 = 1 << 12;
+pub const FOREGROUND: u32 = 1 << 13;
+pub const HOLIDAY: u32 = 1 << 14;
+pub const UNTRADABLE: u32 = 1 << 15;

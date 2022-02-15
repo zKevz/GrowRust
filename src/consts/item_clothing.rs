@@ -1,0 +1,10 @@
+pub const HAT: u8 = 0;
+pub const SHIRT: u8 = 1;
+pub const PANTS: u8 = 2;
+pub const SHOES: u8 = 3;
+pub const FACE_ITEM: u8 = 4;
+pub const HAND: u8 = 5;
+pub const BACK: u8 = 6;
+pub const HAIR: u8 = 7;
+pub const CHEST_ITEM: u8 = 8;
+pub const NUM_BODY_PARTS: u8 = 9;
