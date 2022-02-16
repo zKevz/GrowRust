@@ -1,5 +1,3 @@
-# GrowRust
-Growtopia Private Server made in Rust.
 # Grow Rust
 **Grow Rust is a Growtopia Private Server made in Rust.**
 
