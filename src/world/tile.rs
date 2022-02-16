@@ -1,4 +1,4 @@
-use std::{cell::RefCell, rc::Rc, time::Instant};
+use std::{cell::RefCell, rc::Weak, time::Instant};
 
 use byteorder::{WriteBytesExt, LE};
 
@@ -17,14 +17,14 @@ pub struct Tile {
     pub back: u16,
     pub flags: u16,
     pub extra: TileExtra,
-    pub world: Rc<RefCell<World>>,
+    pub world: Weak<RefCell<World>>,
     pub parent: u16, // lock parent index
     pub hit_count: u8,
     pub last_punch: Instant,
 }
 
 impl Tile {
-    pub fn new(world: Rc<RefCell<World>>, x: u32, y: u32) -> Self {
+    pub fn new(world: Weak<RefCell<World>>, x: u32, y: u32) -> Self {
         Self {
             world,
 

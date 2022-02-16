@@ -53,7 +53,7 @@ pub fn load_world(name: &str) -> Result<Rc<RefCell<World>>> {
     reference.tiles = Vec::with_capacity(count as usize);
 
     for i in 0..count {
-        let mut tile = Tile::new(world.clone(), i % reference.width, i / reference.width);
+        let mut tile = Tile::new(Rc::downgrade(&world), i % reference.width, i / reference.width);
 
         tile.fore = file.read_u16::<LE>()?;
         tile.back = file.read_u16::<LE>()?;

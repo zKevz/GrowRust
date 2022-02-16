@@ -96,7 +96,7 @@ impl World {
 
         for y in 0..HEIGHT {
             for x in 0..WIDTH {
-                let mut tile = Tile::new(world.clone(), x, y);
+                let mut tile = Tile::new(Rc::downgrade(&world), x, y);
                 let mut reference = world.borrow_mut();
 
                 if y >= START_LAYER {

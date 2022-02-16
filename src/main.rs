@@ -1,4 +1,4 @@
-use std::{fs, net::Ipv4Addr, path::Path};
+use std::{fs, net::Ipv4Addr, path::Path, thread, time::Duration};
 
 use server::{
     consts,
@@ -13,6 +13,8 @@ use server::{
 const PORT: u16 = 10000;
 
 fn main() {
+    println!("GrowRust made by kevz#2211!");
+
     enet_wrapper::initialize();
 
     if !Path::new("data").exists() {
@@ -21,6 +23,7 @@ fn main() {
 
     if !Path::new("data/items.dat").exists() {
         eprintln!("Error: Could not find items.dat in 'data/items.dat'!");
+        thread::sleep(Duration::from_secs(5));
         return;
     }
 
@@ -28,6 +31,8 @@ fn main() {
 
     let mut host = ENetHost::new(Ipv4Addr::UNSPECIFIED, PORT, 1024);
     let mut world_manager = WorldManager::new();
+
+    println!("Server is running..");
 
     loop {
         if let Some(event) = host.service(5) {
